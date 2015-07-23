@@ -1,2 +1,2 @@
 # strongloop-workshop
-mes ateliers strongloop
+mes ateliers strongloop v0.0.1

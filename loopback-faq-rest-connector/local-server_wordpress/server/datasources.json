@@ -1,0 +1,36 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "WordpressService": {
+    "name": "WordpressService",
+    "connector": "rest",
+	"remotingEnabled": "true",
+    "operations": [
+      {
+        "template": {
+          "method": "GET",
+          "url": "http://wordpress.issouka.com/wp-json/posts"
+        },
+        "functions": {
+          "find": []
+        }
+      },
+	  {"template": {
+        "method": "PUT",
+        "url": "{!url}/{!id}",
+        "headers": {
+          "accept": "application/json",
+          "content-type": "application/json"
+        },
+        "query": "{query}",
+        "body": "{body}"
+      },
+      "functions": {
+        "update": ["url", "id", "body", "query"]
+      }
+	  }
+    ]
+  }
+}

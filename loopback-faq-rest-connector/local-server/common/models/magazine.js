@@ -1,4 +1,4 @@
-module.exports = function(Magazine) {
+/* module.exports = function(Magazine) {
 
   Magazine.observe('before save', function(ctx, next) {
 
@@ -20,3 +20,4 @@ module.exports = function(Magazine) {
   });
 
 };
+ */
